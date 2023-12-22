@@ -1,1 +1,1 @@
-Black-Scholes Option Pricer in C++. Final homework project for QuantNet C++ Certificate. 
+Black-Scholes Option Pricing in C++. Final homework project for QuantNet C++ Certificate. 
