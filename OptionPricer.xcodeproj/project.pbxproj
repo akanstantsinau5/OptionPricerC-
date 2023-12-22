@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0DE985C62B3613A90056E340 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DE985C52B3613A90056E340 /* main.cpp */; };
+		0DE985CE2B36147D0056E340 /* libboost_filesystem-mt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE985CD2B36147D0056E340 /* libboost_filesystem-mt.dylib */; };
+		0DE985CF2B36147D0056E340 /* libboost_filesystem-mt.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 0DE985CD2B36147D0056E340 /* libboost_filesystem-mt.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0DE985D22B3614850056E340 /* libboost_system-mt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE985D12B3614850056E340 /* libboost_system-mt.dylib */; };
+		0DE985D32B3614850056E340 /* libboost_system-mt.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 0DE985D12B3614850056E340 /* libboost_system-mt.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0DE985D62B3614FC0056E340 /* Option.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DE985D42B3614FC0056E340 /* Option.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,11 +25,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		0DE985D02B36147D0056E340 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0DE985D32B3614850056E340 /* libboost_system-mt.dylib in Embed Libraries */,
+				0DE985CF2B36147D0056E340 /* libboost_filesystem-mt.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0DE985C22B3613A90056E340 /* OptionPricer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OptionPricer; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE985C52B3613A90056E340 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		0DE985CD2B36147D0056E340 /* libboost_filesystem-mt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libboost_filesystem-mt.dylib"; path = "../../../../opt/local/libexec/boost/1.76/lib/libboost_filesystem-mt.dylib"; sourceTree = "<group>"; };
+		0DE985D12B3614850056E340 /* libboost_system-mt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libboost_system-mt.dylib"; path = "../../../../opt/local/libexec/boost/1.76/lib/libboost_system-mt.dylib"; sourceTree = "<group>"; };
+		0DE985D42B3614FC0056E340 /* Option.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Option.cpp; sourceTree = "<group>"; };
+		0DE985D52B3614FC0056E340 /* Option.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Option.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DE985D22B3614850056E340 /* libboost_system-mt.dylib in Frameworks */,
+				0DE985CE2B36147D0056E340 /* libboost_filesystem-mt.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +66,7 @@
 			children = (
 				0DE985C42B3613A90056E340 /* OptionPricer */,
 				0DE985C32B3613A90056E340 /* Products */,
+				0DE985CC2B36147D0056E340 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +82,19 @@
 			isa = PBXGroup;
 			children = (
 				0DE985C52B3613A90056E340 /* main.cpp */,
+				0DE985D52B3614FC0056E340 /* Option.hpp */,
+				0DE985D42B3614FC0056E340 /* Option.cpp */,
 			);
 			path = OptionPricer;
+			sourceTree = "<group>";
+		};
+		0DE985CC2B36147D0056E340 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0DE985D12B3614850056E340 /* libboost_system-mt.dylib */,
+				0DE985CD2B36147D0056E340 /* libboost_filesystem-mt.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,6 +107,7 @@
 				0DE985BE2B3613A90056E340 /* Sources */,
 				0DE985BF2B3613A90056E340 /* Frameworks */,
 				0DE985C02B3613A90056E340 /* CopyFiles */,
+				0DE985D02B36147D0056E340 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -119,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DE985D62B3614FC0056E340 /* Option.cpp in Sources */,
 				0DE985C62B3613A90056E340 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,6 +284,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HMCMT426MS;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = /opt/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/libexec/boost/1.76/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -257,6 +299,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HMCMT426MS;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = /opt/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/libexec/boost/1.76/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
